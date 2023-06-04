@@ -28,13 +28,20 @@ class preWorkAssignment{
 	{
 		System.out.println("Please enter a number...");
 		int num = s.nextInt();
-		for (int i = 1; i <= num; i++)
+		if (num > 0)
 		{
-			for(int j = num; j >= i; j--)
+			for (int i = 1; i <= num; i++)
 			{
-				System.out.print("*");
+				for(int j = num; j >= i; j--)
+				{
+					System.out.print("*");
+				}
+				System.out.println();
 			}
-			System.out.println();
+		}
+		else
+		{
+			System.out.println("Invalid Input");
 		}
 		System.out.println();
 	}
@@ -80,15 +87,22 @@ class preWorkAssignment{
 		int num2 = 1;
 		int num = s.nextInt();
 		int temp;
-		System.out.print(num1 + "," + num2);
-		for (int i = 2; i < num; i++)
+		if (num == 0)
 		{
-			temp = num1 + num2;
-			System.out.print("," + temp);
-			num1 = num2;
-			num2 = temp;
+			System.out.println(num1);	
 		}
-		System.out.println();
+		else 
+		{
+			System.out.print(num1 + "," + num2);
+			for (int i = 2; i < num; i++)
+			{
+				temp = num1 + num2;
+				System.out.print("," + temp);
+				num1 = num2;
+				num2 = temp;
+			}
+			System.out.println();
+		}
 	}
 	public static void main(String[] args)
 	{
